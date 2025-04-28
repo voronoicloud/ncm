@@ -1,0 +1,343 @@
+body {
+  font-family: "Alte Haas Grotesk", serif;
+  background-color: #dedede;
+  color: #3a3a3a;
+  background-image: url('');
+  background-size: cover;
+  background-position: left;
+  background-repeat: repeat;
+  font-size: 2.5vh;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+	position: fixed;
+	top: 0px;
+  left: 0px;
+	text-align: left;
+	z-index: 100;
+	width: 100%;
+  height: 9vh;
+	opacity: 100%;
+}
+
+footer {
+  color: #a4a4a4;
+  bottom:0px;
+  left: 0px;
+  padding: 15px;
+  margin-top: auto;
+}
+
+
+
+
+
+
+
+a {
+    color: #3a3a3a;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+    color: #d64132;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #3a3a3a;
+}
+
+a:active {
+    color: #d64132;
+}
+
+
+
+
+
+h1 {
+  display: inline;
+
+}
+
+h2 {
+
+}
+.logo {
+  width: 7vh;
+  margin: 10px;
+  position: fixed;
+  animation: moveImage 5s ease-in-out infinite;
+}
+
+@keyframes moveImage {
+      0% {
+        transform: translateX(0); /* Anfangsposition */
+      }
+      50% {
+        transform: translateX(10%); /* 10% nach rechts */
+      }
+      100% {
+        transform: translateX(0); /* Endposition (zurück zur Startposition) */
+      }
+
+    }
+
+
+
+
+
+.main {
+  display: grid;
+  grid-template-rows: auto auto; /* Zwei Reihen: eine für das Bild, eine für den Text */
+  justify-items: center;         /* Zentriert die Inhalte */
+  background-color: #dedede;
+  margin-left: 0vh;
+  margin-right: 0vh;
+  margin-top: 2vh;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  overflow-x: hidden;
+  text-align: left;
+}
+
+.premain {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  font-family: "Alte Haas Grotesk", serif;
+  font-size: 5vh;
+  margin-left: 0vh;
+  margin-right: 0vh;
+  margin-top: 9vh;
+  z-index: 2;
+  width: 100%;
+  height: 70vh;
+  padding: 15px;
+  overflow-x: hidden;
+  text-align: left;
+
+}
+
+.main2 {
+  background-color: #3a3a3a;
+  color: #dedede;
+  grid-template-rows: auto auto; /* Zwei Reihen: eine für das Bild, eine für den Text */
+  justify-items: center;         /* Zentriert die Inhalte */
+  margin-left: 0vh;
+  margin-right: 0vh;
+  margin-top: 2vh;
+  z-index: 2;
+  width: 100%;
+  height: 64vh;
+  padding: 15px;
+  overflow-x: hidden;
+  text-align: left;
+
+}
+
+.safezone {
+  grid-template-rows: auto auto; /* Zwei Reihen: eine für das Bild, eine für den Text */
+  justify-items: center;         /* Zentriert die Inhalte */
+  background-color: yellow;
+  margin-left: 0vh;
+  margin-right: 0vh;
+  margin-top: 2vh;
+  z-index: 2;
+  width: 100%;
+  height: 20vh;
+  padding: 15px;
+  overflow-x: hidden;
+  text-align: left;
+
+}
+
+.recent {
+  display: inline;
+  margin-bottom: 10vh;
+  margin-left: : 15px;
+}
+
+
+.poster{
+  height: auto;
+  max-width: 45vh;
+  transition: filter 0.5s ease;
+
+}
+
+.poster:hover {
+  filter: hue-rotate(45deg);
+}
+
+.flower {
+  position: fixed;
+  margin-left: 80em;
+  width: 10em;
+  height: auto;
+  z-index: 1000;
+}
+
+.flower2 {
+  position: fixed;
+  margin-left: 80em;
+  width: 10em;
+  height: auto;
+  z-index: 1000;
+}
+
+.more {
+  display:  grid;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+
+.gallery-container {
+    width: 100%;
+    overflow-x: auto; /* Ermöglicht das horizontale Scrollen */
+    white-space: nowrap; /* Verhindert Zeilenumbruch */
+    padding: 20px 0;
+    scrollbar-width: none;
+}
+
+.gallery {
+    display: inline-flex;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: left;
+    margin-right: 15px; /* Abstand zwischen den Bildern */
+}
+
+.gallery img {
+    width: 40vh; /* Setzt die Bildgröße */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Vergrößert das Bild bei Hover */
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none; /* Versteckt die Scrollbar */
+  }
+
+.caption {
+    margin-top: 10px;
+    color: #dedede;
+    max-width: 40vh; /* Gleiche Breite wie die Bilder */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flowtext {
+  font-size: 2.5vh
+}
+
+.parallax {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background-image: url('/assets/img/noise.png');
+      background-size: cover;
+      background-position: center;
+      transform: translate(-50%, -50%);
+      will-change: transform;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+/*MEDIA QUARY */
+
+@media only screen and (max-width: 600px) {
+
+  footer {
+    color: #a4a4a4;
+    bottom:0px;
+    left: 0px;
+    padding: 15px;
+    margin-top: auto;
+    font-size: 2vh;
+  }
+
+  .premain {
+    display: grid;
+    grid-template-rows: 5vh 5vh 5vh 5vh 5vh; /* Zwei Reihen: eine für das Bild, eine für den Text */
+    justify-items: start;
+    font-family: "Alte Haas Grotesk", serif;
+    gap: 0px;
+    font-size: 5vh;
+    margin-left: 0vh;
+    margin-right: 0vh;
+    margin-top: 9vh;
+    z-index: 2;
+    width: 100%;
+    height: 70vh;
+    padding: 15px;
+    overflow-x: hidden;
+    text-align: left;
+
+  }
+
+  .parallax {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0%;
+        height: 0%;
+        background-image: url('assets/img/noise.png');
+        background-size: cover;
+        background-position: center;
+        transform: translate(-50%, -50%);
+        will-change: transform;
+        z-index: 10000;
+        pointer-events: none;
+        overflow-x: hidden;
+      }
+
+
+  .poster {
+    display: flex;
+    justify-content: ;
+    height:auto;
+    max-width: 42vh;
+
+  }
+
+  .flower {
+    position: fixed;
+    margin-left: 15em;
+    width: 4.5em;
+    height: auto;
+    z-index: 1000;
+  }
+
+  .flower2 {
+    position: fixed;
+    margin-left: 0em;
+    margin-top: 58vh;
+    width: 2.5em;
+    height: auto;
+    z-index: 1000;
+  }
+}
