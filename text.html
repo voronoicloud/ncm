@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sanfter Parallax Hintergrund</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+    }
+
+    .parallax {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120%;
+      height: 120%;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80');
+      background-size: cover;
+      background-position: center;
+      transform: translate(-50%, -50%);
+      will-change: transform;
+    }
+  </style>
+</head>
+<body>
+
+<div class="parallax" id="parallax"></div>
+
+<script>
+const parallax = document.getElementById('parallax');
+
+let targetX = 0;
+let targetY = 0;
+let currentX = 0;
+let currentY = 0;
+
+// Maximale Verschiebung in Prozent
+const maxMovement = 5; // 5% nach links/rechts oder oben/unten
+
+document.addEventListener('mousemove', (e) => {
+  const percentX = (e.clientX / window.innerWidth - 0.5) * -2 * maxMovement;
+  const percentY = (e.clientY / window.innerHeight - 0.5) * -2 * maxMovement;
+
+  targetX = percentX;
+  targetY = percentY;
+});
+
+function animate() {
+  // Sanftes Nachziehen
+  currentX += (targetX - currentX) * 0.1;
+  currentY += (targetY - currentY) * 0.1;
+
+  parallax.style.transform = `translate(calc(-50% + ${currentX}%), calc(-50% + ${currentY}%))`;
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+</body>
+</html>

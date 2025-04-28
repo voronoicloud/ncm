@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Alte Haas Grotesk";
+  src:url(../fonts/Alte-Haas-Grotesk-Bold-V2.woff) format("woff"),
+      url(../fonts/Alte-Haas-Grotesk-Bold-V2.woff2) format("woff2");
+  font-weight:200;
+  font-style:normal;
+}
+
+@font-face {
+  font-family: "Mazius Display Italic";
+  src:url(../fonts/MaziusDisplay-Extraitalic.woff) format("woff"),
+      url(../fonts/MaziusDisplay-Extraitalic.woff2) format("woff2");
+  font-weight:200;
+  font-style:normal;
+}
+
+
+@font-face {
+  font-family: "Aujournuit-Wide";
+  src: url(../fonts/Aujournuit-Wide.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
